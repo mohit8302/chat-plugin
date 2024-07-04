@@ -1,0 +1,173 @@
+/* Hide scrollbar for chat box */
+.chat-box::-webkit-scrollbar {
+  display: none;
+}
+
+.chat-box {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Cross button styles */
+.cross-btn {
+  margin-top: 1rem;
+  margin-left: 21rem;
+}
+
+/* Settings icon styles */
+.setting-icon {
+  height: 20px;
+  width: 20px;
+}
+
+/* Loading dots animation */
+.loading-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  background-color: #bfbfbf;
+  border-radius: 50%;
+  animation: bounce 0.6s infinite alternate;
+}
+
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+/* Switch styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #7c7c7c;
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Notification badge styles */
+.notification-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: rgb(240, 110, 110);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* Message container styles */
+.message-container {
+  margin-bottom: 0.5rem;
+}
+
+.message-text {
+  padding: 0.5rem;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.message-text p {
+  margin: 0;
+  padding: 0;
+}
+
+.message-timestamp {
+  margin-top: 0.25rem;
+  font-size: 9px;
+  color: #888;
+}
+
+/* Responsive styles */
+
+/* Media query for screens up to 765px */
+@media (max-width: 765px) {
+  .cross-btn {
+    margin-top: 2rem;
+    margin-left: 15rem;
+  }
+}
+
+/* Media query for screens up to 640px */
+@media (max-width: 640px) {
+  .cross-btn {
+    margin-top: 7rem;
+    margin-left: 17rem;
+  }
+}
+
+/* Media query for screens up to 480px */
+@media (max-width: 480px) {
+  .cross-btn {
+    margin-top: 10px;
+    margin-left: 17rem;
+  }
+}
